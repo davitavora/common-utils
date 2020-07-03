@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.github.davitavorah.common.CommonUtilsAutoConfiguration,\
+  com.github.davitavorah.common.configuration.BindingControllerAdvice,\
+  com.github.davitavorah.common.configuration.ExecutorServiceConfiguration

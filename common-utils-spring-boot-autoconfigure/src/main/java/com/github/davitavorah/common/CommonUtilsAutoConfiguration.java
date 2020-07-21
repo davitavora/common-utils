@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.bohnman.squiggly.Squiggly;
 import com.github.bohnman.squiggly.web.RequestSquigglyContextProvider;
 import com.github.bohnman.squiggly.web.SquigglyRequestFilter;
+import com.github.davitavorah.common.filter.AllowCustomHeadersFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -25,6 +26,14 @@ public class CommonUtilsAutoConfiguration {
         var filterRegistration = new FilterRegistrationBean<SquigglyRequestFilter>();
         filterRegistration.setFilter(new SquigglyRequestFilter());
         filterRegistration.setOrder(1);
+        return filterRegistration;
+    }
+
+    @Bean
+    public FilterRegistrationBean<AllowCustomHeadersFilter> customResponseFilterRegistration() {
+        var filterRegistration = new FilterRegistrationBean<AllowCustomHeadersFilter>();
+        filterRegistration.setFilter(new AllowCustomHeadersFilter());
+        filterRegistration.setOrder(2);
         return filterRegistration;
     }
 

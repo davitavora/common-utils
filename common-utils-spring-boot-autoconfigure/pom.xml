@@ -12,7 +12,7 @@
     <artifactId>common-utils-spring-boot-autoconfigure</artifactId>
 
     <dependencies>
-        <!-- Spring -->
+        <!--  Spring  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -34,16 +34,14 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
-
-        <!-- Internal -->
+        <!--  Internal  -->
         <dependency>
             <groupId>com.github.davitavorah</groupId>
             <artifactId>common-utils-library</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <optional>true</optional>
         </dependency>
-
-        <!-- Others -->
+        <!--  Others  -->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
